@@ -69,7 +69,7 @@ export const drinkData = [
 		subTitle: "",
 		menu: "コロナビール",
 		description: "",
-		image: "/assets/menu/2/6.png",
+		image: "",
 		// imgClass: "object-contain",
 	},
 	{

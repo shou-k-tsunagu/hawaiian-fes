@@ -17,13 +17,11 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
   }}
 >
   <MainVisual />
-  <div
-    class="bg-[#F2ECD7] pb-[54px] md:pb-[139px] pt-[50px] md:pt-[23px] relative"
-  >
+  <div class="bg-[#F2ECD7] pb-[54px] md:pb-[139px] pt-[23px] relative">
     <Image
       src={mvBgImage3}
       alt=""
-      class="absolute -top-24 md:-top-48 2xl:-top-56 left-0 w-full object-cover -z-20"
+      class="absolute -top-20 md:-top-48 2xl:-top-56 left-0 w-full object-cover -z-20"
     />
     <div class="mx-auto md:max-w-[960px] px-[15px] lg:px-0 relative z-10">
       <p
@@ -243,7 +241,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
         }
       </div>
     </div>
-    <div class="absolute top-0 left-0 right-0">
+    <div class="absolute top-20 left-0 right-0">
       <Image src={mainBgImage} alt="" class="w-full" />
       <Image src={mainBgImage} alt="" class="w-full" />
     </div>
@@ -282,8 +280,10 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       </div>
     </div>
   </div>
-  <div class="pt-[50px] md:pt-[67px] pb-[51px] md:pb-[115px] bg-[#EDFAFE]">
-    <div class="mx-auto w-full md:max-w-[960px]">
+  <div
+    class="pt-[50px] md:pt-[67px] pb-[51px] md:pb-[115px] bg-[#EDFAFE] relative z-10"
+  >
+    <div class="mx-auto w-full md:max-w-[960px] px-[15px] lg:px-0">
       <p class="text-center text-[23px] md:text-[35px] font-semibold text-blue">
         コラボレーション企画
       </p>
@@ -293,11 +293,11 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
         class="mx-auto mb-[21px] md:mb-[93px] mt-[21px]"
       />
       <div
-        class="flex flex-wrap justify-between md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[24px]"
+        class="flex flex-wrap flex-col justify-between md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[40px]"
       >
         {
           CollaboData.map((data) => (
-            <div class="w-[calc(50%-10px)] md:max-w-[462px]">
+            <div class="w-full md:w-[calc(50%-10px)] md:max-w-[462px]">
               <img src={data.image[0]} alt="" />
               <p class="text-[14px] leading-[33px]">{data.description}</p>
             </div>
