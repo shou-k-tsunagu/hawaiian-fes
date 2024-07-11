@@ -1,7 +1,122 @@
 ---
-// export type Props = {}
+import { Image } from 'astro:assets'
 
-// const {} = Astro.props
+import footerBgSpImage from '../../assets/common/footer-bg-sp.png'
+import footerBgImage from '../../assets/common/footer-bg.png'
+import logoImage from '../../assets/common/icon-img.png'
+import InstagramImage from '../../assets/common/instagram-logo.png'
 ---
 
-<footer class="bg-gray-200 h-[80px] w-full">footer</footer>
+<footer class="relative h-[939px] md:h-[658px] w-full">
+  <div
+    class="md:absolute left-0 right-0 top-[47px] mx-auto md:max-w-[960px] text-white"
+  >
+    <div
+      class="flex flex-col md:flex-row md:h-[478px] md:rounded-[30px] md:bg-[#00A3CF]/90 px-[18px] md:px-[48px] py-[39px]"
+    >
+      <div class="">
+        <Image
+          src={logoImage}
+          alt=""
+          class="w-[164px] mx-auto md:mx-0 bg-white p-[14px] hidden md:block"
+        />
+        <a
+          class="relative mt-[53px] md:mt-[31px] mx-auto flex flex-col w-[214px] h-[89px] md:h-[77px] md:w-[164px] items-center justify-center rounded-[4px] bg-black/90"
+          href="#"
+          target="_blank"
+        >
+          <p class="text-[13px] pt-[6px]">公式Instagram</p>
+          <div class="flex mt-[8px] md:mt-[6px]">
+            <Image
+              src={InstagramImage}
+              alt=""
+              class="w-[34px] h-[34px] md:h-[31px] md:w-[31px] mr-[4px]"
+            />
+            <p class="text-red text-[16px] leading-[34px] md:leading-[31px]">
+              @xxxxxxxxx
+            </p>
+          </div>
+          <!-- <div
+            class="absolute left-[37px] md:left-[8px] top-[-11px] w-[148px] rounded-[33px] bg-red text-center text-[11px] leading-[21px]"
+          >
+            インスタライブ実施予定!!
+          </div> -->
+        </a>
+      </div>
+      <div class="md:ml-[56px] font-semibold">
+        <p
+          class="text-[20px] md:text-[27px] leading-[31px] md:leading-[47px] mt-[30px] md:mt-0"
+        >
+          トロピカル・ハワイアン<br class="md:hidden" />フェスティバル2024
+        </p>
+        <p class="text-[13px] md:text-[18px] leading-[33px]">
+          in アーバンドック ららぽーと豊洲
+        </p>
+        <table class="mt-[30px] table-fixed text-[13px] md:text-[14px]">
+          <tbody>
+            <tr>
+              <td
+                class="content-start border-r border-white w-[67px] md:w-[79px]"
+                >日時</td
+              >
+              <td class="pb-[16px] md:pb-[20px] pl-[16px] md:pl-[26px]">
+                2024年7月19日（金）～8月18日(日)<br />
+                <span class="text-[12px] md:text-[13px] font-medium"
+                  >平日15:00～22:00 <br
+                    class="md:hidden"
+                  />土日祝日11:00〜22:00（L.O 21:30）<br
+                  />※雨天決行（荒天時は中止）</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="content-start border-r border-white">会場</td>
+              <td class="pb-[16px] md:pb-[20px] pl-[16px] md:pl-[26px]"
+                >アーバンドック ららぽーと豊洲、シーサイドデッキ</td
+              >
+            </tr>
+            <tr>
+              <td class="content-start border-r border-white">出店内容</td>
+              <td class="pb-[16px] md:pb-[20px] pl-[16px] md:pl-[26px]"
+                >ハワイアンフード／トロピカルドリンクなど</td
+              >
+            </tr>
+            <tr>
+              <td class="content-start border-r border-white">ステージ</td>
+              <td class="pb-[16px] md:pb-[20px] pl-[16px] md:pl-[26px]"
+                >特設ステージにて音楽の演奏・パフォーマンス</td
+              >
+            </tr>
+            <tr>
+              <td class="content-start border-r border-white">入場料</td>
+              <td class="pb-0 pl-[16px] md:pl-[26px]"
+                >無料（ただし飲食は有料）</td
+              >
+            </tr>
+          </tbody>
+        </table>
+        <p class="mt-[32px] text-[13px] font-medium leading-[22px]">
+          主催：トロピカル・ハワイアンフェスティバル<br
+            class="md:hidden"
+          /><span class="md:hidden">{`\u3000\u3000\u3000`}</span>実行委員会
+        </p>
+      </div>
+    </div>
+    <div
+      class="md:mt-[41px] text-center text-[13px] leading-[23px] md:leading-[33px]"
+    >
+      Copyright (C)2024 Tropical Hawaiian Festival Japan Executive Committee All
+      Rights Reserved.
+    </div>
+  </div>
+  <Image
+    src={footerBgImage}
+    alt=""
+    class="w-full h-full absolute top-0 left-0 object-cover -z-10 hidden md:block"
+  />
+  <Image
+    src={footerBgSpImage}
+    alt=""
+    class="w-full h-full absolute top-0 left-0 object-cover -z-10 md:hidden"
+  />
+</footer>

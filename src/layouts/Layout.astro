@@ -1,7 +1,6 @@
 ---
 import '@/styles/globals.css'
 import Footer from '@/components/Footer/Footer.astro'
-import Header from '@/components/Header/Header.astro'
 import Meta, { type Props as MetaProps } from '@/components/Meta/Meta.astro'
 
 export interface Props {
@@ -17,7 +16,7 @@ const { meta } = Astro.props
     <Meta {...meta} />
   </head>
   <body>
-    <Header />
+    <!-- <Header /> -->
     <main>
       <slot />
     </main>

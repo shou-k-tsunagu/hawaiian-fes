@@ -1,0 +1,12 @@
+<RequireAny>
+		# IP制限設定
+		Require ip 150.249.239.34
+		Require ip 18.180.68.50
+		Require ip 15.152.138.25
+	
+	# ベーシック認証
+	AuthType Basic
+	AuthName "Require Auth"
+	AuthUserFile /var/www/stg.tropical-hawaiianfestival.jp/public_html/.htpasswd
+	Require valid-user
+</RequireAny>

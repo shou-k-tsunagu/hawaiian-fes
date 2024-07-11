@@ -1,7 +1,98 @@
 ---
+import { Image } from 'astro:assets'
 
+import bgBottomImage from '../../assets/common/bg-bottom-img.png'
+import bgLeftImage from '../../assets/common/bg-left-img.png'
+import bgRightImage from '../../assets/common/bg-right-img.png'
+import iconImage from '../../assets/common/icon-img.png'
+import InstagramImage from '../../assets/common/instagram-logo.png'
+import mvBgImage from '../../assets/common/mv-bg-img.png'
+import mvLeftImage from '../../assets/common/mv-left-img.png'
+import mvRightImage from '../../assets/common/mv-right-img.png'
+// import mvTopSpImage from "../../assets/common/mv-top-sp.png";
+// import mvTopImage from "../../assets/common/mv-top.png";
 ---
 
-<div>
-  <img class="h-[300px] w-full" src="/assets/common/sample.png" alt="" />
+<!-- <div id="loading" class="w-screen h-screen bg-black fixed top-0 left-0 z-50 flex justify-center items-center">
+  <div class="w-[100px] h-[100px] rounded-full bg-white/80 animate-pulse"></div>
+</div> -->
+<div class="pt-[60px] pb-[37px] mb:pb-[61px] md:pb-[124px] relative w-full">
+  <!-- <Image src={mvTopImage} alt="" class="w-full h-full object-cover hidden md:block" id="mvTopImage" /> -->
+  <!-- <Image src={mvTopSpImage} alt="" class="w-full h-full object-cover md:hidden" id="mvTopImage" /> -->
+  <div
+    class="md:max-w-[896px] mx-auto px-[48px] pt-[58px] pb-[38px] bg-white rounded-[20px]"
+  >
+    <div class="flex">
+      <Image src={mvLeftImage} alt="" class="max-h-[512px] hidden md:block" />
+      <Image src={iconImage} alt="" class="mb-[64px] w-[576px] mx-auto" />
+      <Image src={mvRightImage} alt="" class="max-h-[476px] hidden md:block" />
+    </div>
+    <p
+      class="text-[14px] md:text-[15px] leading-[30px] font-semibold mb-[32px]"
+    >
+      「トロピカル・ハワイアンフェスティバル」は、ハワイ文化を体験し楽しむためのイベントです。<br
+      />
+      このフェスタでは、ハワイ特有の音楽、ダンス、料理、クラフトなど、さまざまなハワイの魅力を日本国内で体験できます。<br
+      />
+      家族や友人と一緒に楽しめる内容が盛りだくさんで、ハワイアンライフスタイルを感じる絶好の機会です。<br
+      />
+      当実行委員会は、ハワイ文化の楽しさを体験していただきたく活動してまいりたいと思います。<br
+      />
+      このトロピカル・ハワイアンフェスティバルをきっかけにハワイの食生活や芸術文化に触れ、異文化交流を深めることができれば幸いです。
+    </p>
+    <a
+      class="flex h-[119px] justify-around w-full items-center md:justify-evenly rounded-[20px] bg-black/90"
+      href="#"
+      target="_blank"
+    >
+      <div class="flex flex-col">
+        <p
+          class="text-[15px] md:text-[25px] order-1 md:order-none font-semibold text-white leading-[26px] pt-[8px] md:pt-0 md:mb-[10px]"
+        >
+          公式Instagram
+        </p>
+        <!-- <div
+          class="w-[236px] md:w-[292px] rounded-[50px] bg-red text-center text-white text-[14px] md:text-[16px] leading-[26px] md:leading-[33px] font-semibold"
+        >
+          定期的にインスタライブ実施予定!!
+        </div> -->
+        <p class="text-[24px] text-blue order-2 font-semibold md:hidden">
+          @tropical.hawaiian
+        </p>
+      </div>
+      <div class="flex justify-center items-center">
+        <Image
+          src={InstagramImage}
+          alt=""
+          class="h-[62px] md:h-[60px] w-[62px] md:w-[60px] md:mr-[8px]"
+        />
+        <p class="md:text-[25px] text-blue font-semibold md:block hidden">
+          @tropical.hawaiian
+        </p>
+      </div>
+    </a>
+  </div>
+  <Image src={bgLeftImage} alt="" class="absolute top-0 left-0 -z-10" />
+  <Image src={bgRightImage} alt="" class="absolute top-0 right-0 -z-10" />
+  <Image src={bgBottomImage} alt="" class="absolute bottom-8 right-72 -z-10" />
+  <Image
+    src={mvBgImage}
+    alt=""
+    class="w-full h-full absolute top-0 object-cover object-top left-0 -z-30"
+    id="mvBgImage"
+  />
 </div>
+
+<script>
+  // const loading = document.getElementById('loading');
+  // const topImg = document.getElementById('mvTopImage') as HTMLImageElement;
+
+  // const image1 = new Image();
+  // image1.src = topImg.src
+
+  // if (image1.complete) {
+  //   loading!.style.display = "none";
+  // } else {
+  //   image1.onload = () => loading!.style.display = "none";
+  // }
+</script>

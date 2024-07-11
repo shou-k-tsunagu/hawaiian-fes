@@ -1,19 +1,367 @@
 ---
+import { Image } from 'astro:assets'
+import { ArtistCard } from '@/components/Common/ArtistCard'
+import { ShopCard } from '@/components/Common/ShopCard'
 import MainVisual from '@/components/MainVisual/MainVisual.astro'
 import Layout from '@/layouts/Layout.astro'
+import { CollaboData, artistData } from '@/lib/artist-data'
+import { drinkData, foodData, shopInfo } from '@/lib/shop-data'
+
+import mainBgImage from '@/assets/common/main-bg.png'
+import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
 ---
 
 <Layout
   meta={{
-    title: 'TOP',
+    title: 'トロピカル・ハワイアンフェスティバル',
   }}
 >
   <MainVisual />
-  <h1>Title</h1>
-</Layout>
+  <div
+    class="bg-[#F2ECD7] pb-[54px] md:pb-[139px] pt-[50px] md:pt-[23px] relative"
+  >
+    <Image
+      src={mvBgImage3}
+      alt=""
+      class="absolute -top-24 md:-top-48 2xl:-top-56 left-0 w-full object-cover -z-20"
+    />
+    <div class="mx-auto md:max-w-[960px] px-[15px] lg:px-0 relative z-10">
+      <p
+        class="text-center text-[23px] md:text-[35px] font-semibold text-blue"
+        id="overview"
+      >
+        開催概要
+      </p>
+      <img
+        src="/assets/common/flower-logo.svg"
+        alt=""
+        class="mx-auto mb-[30px] md:mb-[37px] mt-[12px]"
+      />
+      <div
+        class="mb-[84px] drop-shadow-og md:min-h-[447px] rounded-[30px] bg-white pt-[22px] md:pt-[52px] pb-[32px] md:pb-[50px] px-[20px] lg:pl-[123px] relative"
+      >
+        <div class="relative">
+          <table
+            class="table-fixed text-[18px] font-semibold text-black hidden md:block"
+          >
+            <tbody>
+              <tr>
+                <td class="content-start">
+                  <div
+                    class="w-[108px] rounded-[6px] bg-blue text-center leading-[35px] text-white"
+                  >
+                    イベント名
+                  </div>
+                </td>
+                <td class="pb-[35px] pl-[19px] leading-[35px]">
+                  トロピカル・ハワイアンフェスティバル2024<br />
+                  in アーバンドック ららぽーと豊洲
+                </td>
+              </tr>
+              <tr>
+                <td class="content-start">
+                  <div
+                    class="w-[108px] rounded-[6px] bg-blue text-center leading-[35px] text-white"
+                  >
+                    日時
+                  </div>
+                </td>
+                <td class="pb-[24px] pl-[19px] leading-[35px]">
+                  2024年7月19日（金）～8月18日(日)<br />
+                  <p class="text-[15px] font-medium leading-[22px]">
+                    平日15:00～22:00 土日祝日11:00〜22:00（L.O 21:30）<br />
+                    ※雨天決行（荒天時は中止）
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="content-start">
+                  <div
+                    class="w-[108px] rounded-[6px] bg-blue text-center leading-[35px] text-white"
+                  >
+                    会場
+                  </div>
+                </td>
+                <td class="pb-[35px] pl-[19px] leading-[35px]">
+                  アーバンドック ららぽーと豊洲、シーサイドデッキ
+                </td>
+              </tr>
+              <tr>
+                <td class="content-start">
+                  <div
+                    class="w-[108px] rounded-[6px] bg-blue text-center leading-[35px] text-white"
+                  >
+                    入場料
+                  </div>
+                </td>
+                <td class="pb-[20px] pl-[19px] leading-[35px]">
+                  無料（ただし飲食は有料）
+                  <!-- <p class="text-[15px] font-medium leading-[22px]">事前予約（<a href="https://www.kkday.com/ja/product/182044?cid=12407&ud1=officialsite" target="_blank" class="text-red">販売はこちら</a>）または当日券売所で購入可能です。</p> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <div class="absolute bottom-0 right-0 hidden md:block">
+          <Image src={infoImage} alt="" class="w-[222px] h-[222px] rounded-[20px]" />
+        </div> -->
+        </div>
 
-<style>
-  main {
-    width: 100%;
-  }
-</style>
+        <!-- SP -->
+        <div class="text-[14px] font-semibold leading-[25px] md:hidden">
+          <div
+            class="w-[88px] rounded-[6px] bg-blue text-center text-white mb-[10px]"
+          >
+            イベント名
+          </div>
+          <p class="mb-[20px]">
+            トロピカル・ハワイアンフェスティバル2024<br />
+            in アーバンドック ららぽーと豊洲
+          </p>
+          <div
+            class="w-[88px] rounded-[6px] bg-blue text-center text-white mb-[10px]"
+          >
+            日時
+          </div>
+          <p class="">2024年7月12日（金）～7月21日（日）</p>
+          <p class="text-[14px] font-medium leading-[24px] mb-[20px]">
+            平日15:00～22:00<br />土日祝日11:00〜22:00（L.O 21:30）<br />
+            ※雨天決行（荒天時は中止）
+          </p>
+          <div
+            class="w-[88px] rounded-[6px] bg-blue text-center text-white mb-[10px]"
+          >
+            会場
+          </div>
+          <p class="mb-[20px]">
+            アーバンドック ららぽーと豊洲、<br />
+            シーサイドデッキ
+          </p>
+          <div
+            class="w-[88px] rounded-[6px] bg-blue text-center text-white mb-[10px]"
+          >
+            入場料
+          </div>
+          <p class="">無料（ただし飲食は有料）</p>
+          <!-- <p class="font-medium mb-[20px]">
+            事前予約（<a
+              href="https://www.kkday.com/ja/product/182044?cid=12407&ud1=officialsite"
+              target="_blank"
+              class="text-red">販売はこちら</a
+            >）または当日券売所で購入可能です。
+          </p> -->
+          <!-- <Image src={infoImage} alt="" class="h-[202px] mt-[19px] rounded-[20px] object-cover" /> -->
+        </div>
+
+        <!-- <div class="mt-[26px] h-[450px] w-full">
+          <div class="relative h-full">
+            <iframe
+              id="pmap"
+              class="absolute w-full h-full top-0 left-0"
+              src="https://platinumaps.jp/d/yataiwan-fes2024?floor=G"
+              allow="geolocation"
+              style="border: 0; background-color: #fafafa;"
+              name="pmap"></iframe>
+          </div>
+        </div> -->
+      </div>
+      <p class="text-center text-[23px] md:text-[35px] font-semibold text-blue">
+        出店情報
+      </p>
+      <img
+        src="/assets/common/flower-logo.svg"
+        alt=""
+        class="mx-auto mb-[57px] mt-[21px]"
+      />
+      <div
+        class="flex justify-center items-center gap-x-[7px] md:gap-x-[24px] mb-[25px] md:mb-[44px]"
+      >
+        <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
+        <p
+          class="text-[26px] md:text-[40px] font-semibold text-black"
+          id="food-menu"
+        >
+          FOOD MENU
+        </p>
+        <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
+      </div>
+      <div
+        class="flex md:justify-center justify-between lg:justify-normal md:flex-row flex-wrap gap-y-[30px] md:gap-x-[20px] md:gap-y-[50px]"
+      >
+        {
+          foodData.map((shop) => {
+            // if (shop.image !== "") {
+            return (
+              <ShopCard
+                client:load
+                id={shop.id}
+                title={shop.title}
+                subTitle={shop.subTitle}
+                menu={shop.menu}
+                description={shop.description}
+                image={shop.image}
+                imgClass={shop.imgClass}
+                dialogInfo={shopInfo.find((info) => info.id === shop.id)?.info}
+              />
+            )
+            // }
+          })
+        }
+      </div>
+      <div
+        class="flex justify-center items-center mt-[47px] md:mt-[90px] gap-x-[7px] md:gap-x-[24px] mb-[25px] md:mb-[44px]"
+      >
+        <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
+        <p
+          class="text-[26px] md:text-[40px] font-semibold text-black"
+          id="drink-menu"
+        >
+          DRINK MENU
+        </p>
+        <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
+      </div>
+      <div
+        class="flex md:justify-center justify-between lg:justify-normal md:flex-row flex-wrap gap-y-[30px] md:gap-x-[20px] md:gap-y-[50px]"
+      >
+        {
+          drinkData.map((shop) => {
+            // if (shop.image !== "") {
+            return (
+              <ShopCard
+                client:load
+                shopNo={shop.shopNo}
+                title={shop.title}
+                subTitle={shop.subTitle}
+                menu={shop.menu}
+                description={shop.description}
+                image={shop.image}
+                imgClass={shop.imgClass}
+                dialogInfo={shopInfo.find((info) => info.id === shop.id)?.info}
+              />
+            )
+            // }
+          })
+        }
+      </div>
+    </div>
+    <div class="absolute top-0 left-0 right-0">
+      <Image src={mainBgImage} alt="" class="w-full" />
+      <Image src={mainBgImage} alt="" class="w-full" />
+    </div>
+  </div>
+  <div
+    class="bg-[#FAFAFA] pt-[53px] md:pt-[67px] pb-[30px] md:pb-[110px] relative z-10"
+  >
+    <div class="mx-auto max-w-[960px] px-[15px] lg:px-0">
+      <p
+        class="text-center text-[23px] md:text-[35px] font-semibold text-blue"
+        id="stage-info"
+      >
+        ステージ情報
+      </p>
+      <img
+        src="/assets/common/flower-logo.svg"
+        alt=""
+        class="mx-auto mb-[26px] md:mb-[102px] mt-[21px]"
+      />
+      <div
+        class="flex flex-wrap md:justify-center lg:justify-normal md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[24px]"
+      >
+        {
+          artistData.map((artist) => (
+            <ArtistCard
+              client:load
+              id={artist.id}
+              name={artist.name}
+              image={artist.image}
+              description={artist.description}
+              sns={artist.sns}
+              schedule={artist.schedule}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="pt-[50px] md:pt-[67px] pb-[51px] md:pb-[115px] bg-[#EDFAFE]">
+    <div class="mx-auto w-full md:max-w-[960px]">
+      <p class="text-center text-[23px] md:text-[35px] font-semibold text-blue">
+        コラボレーション企画
+      </p>
+      <img
+        src="/assets/common/flower-logo.svg"
+        alt=""
+        class="mx-auto mb-[21px] md:mb-[93px] mt-[21px]"
+      />
+      <div
+        class="flex flex-wrap justify-between md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[24px]"
+      >
+        {
+          CollaboData.map((data) => (
+            <div class="w-[calc(50%-10px)] md:max-w-[462px]">
+              <img src={data.image[0]} alt="" />
+              <p class="text-[14px] leading-[33px]">{data.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="pt-[50px] md:pt-[60px] pb-[51px] md:pb-[132px]">
+    <div class="mx-auto w-full md:max-w-[960px]">
+      <p class="text-center text-[23px] md:text-[35px] font-semibold text-blue">
+        アクセスマップ
+      </p>
+      <img
+        src="/assets/common/flower-logo.svg"
+        alt=""
+        class="mx-auto mb-[21px] md:mb-[64px] mt-[21px]"
+      />
+      <p class="text-[18px] font-semibold leading-[32px] text-center">
+        アーバンドック ららぽーと豊洲、<br
+          class="md:hidden"
+        />シーサイドデッキ<br />
+        <span class="text-[16px] font-medium leading-[29px]"
+          >〒135-8614 東京都江東区豊洲2丁目4−9</span
+        >
+      </p>
+      <div class="h-[570px] mt-[17px] mb-[24px]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8584166532783!2d139.79037811569518!3d35.655859780200224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f100!3m3!1m2!1s0x60188998aa839b45%3A0xc215a94747b4bd09!2z44Ki44O844OQ44Oz44OJ44OD44Kv44KJ44KJ44G944O844Go6LGK5rSy!5e0!3m2!1sja!2sjp!4v1497854288545"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p
+        class="text-blue text-center text-[15px] md:text-[18px] leading-[32px] font-semibold mb-[20px]"
+      >
+        東京メトロ有楽町線 豊洲駅2b出口直結<br />
+        ゆりかもめ 豊洲駅直結
+      </p>
+      <a
+        href="https://mitsui-shopping-park.com/lalaport/toyosu/access/index.html"
+        target="_blank"
+        class="text-white text-center text-[15px] md:text-[20px] leading-[32px] font-semibold"
+      >
+        <div
+          class="bg-blue w-[334px] h-[70px] mx-auto rounded-[10px] flex justify-center items-center"
+        >
+          会場へのアクセスはこちら
+          <img
+            src="/assets/common/right-arrow-logo.svg"
+            alt=""
+            class="ml-[32px]"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    main {
+      width: 100%;
+    }
+  </style>
+</Layout>
