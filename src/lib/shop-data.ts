@@ -7,6 +7,7 @@ export const foodData = [
 		description: "",
 		image: "/assets/menu/1/1.jpg",
 		imgClass: "",
+		shopImage: "/assets/shop/1.png",
 	},
 	{
 		id: "2",
@@ -15,6 +16,7 @@ export const foodData = [
 		menu: "パイナップルピラフ",
 		description: "",
 		image: "/assets/menu/2/2.jpg",
+		shopImage: "/assets/shop/2.png",
 		// imgClass: "object-contain",
 	},
 	{
@@ -24,6 +26,7 @@ export const foodData = [
 		menu: "ローストビーフ",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/3.png",
 	},
 	{
 		id: "4",
@@ -32,6 +35,7 @@ export const foodData = [
 		menu: "ガーリックシュリンプ（ソフトシェルシュリンプ）",
 		description: "",
 		image: "/assets/menu/4/2.jpg",
+		shopImage: "/assets/shop/4.png",
 	},
 	{
 		id: "5",
@@ -40,6 +44,7 @@ export const foodData = [
 		menu: "ハワイアンステーキ",
 		description: "",
 		image: "/assets/menu/5/1.jpg",
+		shopImage: "/assets/shop/5.png",
 	},
 	{
 		id: "6",
@@ -48,6 +53,7 @@ export const foodData = [
 		menu: "マラサダ",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/6.png",
 	},
 ];
 
@@ -61,6 +67,7 @@ export const drinkData = [
 		description: "",
 		image: "",
 		imgClass: "",
+		shopImage: "/assets/shop/1.png",
 	},
 	{
 		id: "42",
@@ -70,6 +77,7 @@ export const drinkData = [
 		menu: "コロナビール",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/2.png",
 		// imgClass: "object-contain",
 	},
 	{
@@ -79,6 +87,7 @@ export const drinkData = [
 		menu: "ブルーム―ンビール生",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/3.png",
 	},
 	{
 		id: "44",
@@ -87,6 +96,7 @@ export const drinkData = [
 		menu: "ビックウエーブゴールデンエール 樽",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/4.png",
 	},
 	{
 		id: "45",
@@ -95,6 +105,7 @@ export const drinkData = [
 		menu: "バドワイザー",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/5.png",
 	},
 	{
 		id: "46",
@@ -103,6 +114,7 @@ export const drinkData = [
 		menu: "パイナップルカクテル",
 		description: "",
 		image: "",
+		shopImage: "/assets/shop/6.png",
 	},
 ];
 

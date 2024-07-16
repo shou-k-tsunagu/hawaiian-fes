@@ -18,6 +18,7 @@ export interface Props {
 	description: string;
 	image: string;
 	imgClass?: string;
+	shopImage?: string;
 	dialogInfo?: {
 		title: string;
 		price: string;
@@ -38,18 +39,20 @@ export const ShopCard = ({
 	description,
 	image,
 	imgClass,
+	shopImage,
 	dialogInfo,
 }: Props) => {
 	return (
 		<Dialog>
 			<DialogTrigger asChild className="cursor-pointer">
 				<div className="flex flex-col drop-shadow-og w-[calc(50%-4px)] md:max-w-[305px] rounded-[18px] md:rounded-[30px] bg-white px-[15px] md:px-[23px] pb-[23px] pt-[15px] md:pt-[23px] text-black">
-					<p className="mt-[9px] text-[16px] md:text-[22px] font-semibold text-blue">
+					{/* <p className="mt-[9px] text-[16px] md:text-[22px] font-semibold text-blue">
 						{`${shopNo ? shopNo : id}.${title}`}
 					</p>
 					<p className="text-[12px] md:text-[16px] text-blue">
 						{subTitle || "　"}
-					</p>
+					</p> */}
+					<img src={shopImage} alt="" className="" />
 					{image && (
 						<img
 							src={image}
@@ -71,15 +74,16 @@ export const ShopCard = ({
 					</div>
 				</div>
 			</DialogTrigger>
-			<DialogContent className="rounded-[16px] md:rounded-[33px] h-auto px-[15px] w-[95%] md:max-w-[803px] md:pt-[40px] md:pl-[50px] md:pr-[40px]">
+			<DialogContent className="rounded-[16px] md:rounded-[33px] h-auto px-[15px] w-[95%] md:max-w-[803px] md:pl-[50px] md:pr-[40px]">
 				<DialogHeader className="text-left">
 					<DialogTitle>
-						<p className="text-[20px] md:text-[28px] text-blue font-semibold">
+						{/* <p className="text-[20px] md:text-[28px] text-blue font-semibold">
 							{title}
 						</p>
 						<p className="text-[14px] md:text-[22px] text-blue font-normal mt-[8px]">
 							{subTitle || "　"}
-						</p>
+						</p> */}
+						<img src={shopImage} alt="" className="w-[500px] mx-auto" />
 					</DialogTitle>
 				</DialogHeader>
 				<DialogDescription className="overflow-y-auto max-h-[493px] text-[#222222]">

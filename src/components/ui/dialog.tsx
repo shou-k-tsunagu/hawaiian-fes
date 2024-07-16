@@ -42,7 +42,7 @@ const DialogContent = React.forwardRef<
 			{...props}
 		>
 			{children}
-			<DialogPrimitive.Close className="absolute right-4 top-[-40px] md:top-[-70px] rounded-sm ring-offset-background transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+			<DialogPrimitive.Close className="absolute right-4 top-[-40px] md:top-[-60px] rounded-sm ring-offset-background transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
 				{/* <X className="h-4 w-4" /> */}
 				<img
 					src="/assets/common/close-button.svg"
