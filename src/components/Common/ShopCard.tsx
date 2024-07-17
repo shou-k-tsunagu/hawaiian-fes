@@ -53,15 +53,20 @@ export const ShopCard = ({
 						{subTitle || "　"}
 					</p> */}
 					<img src={shopImage} alt="" className="" />
-					{image && (
+					{image ? (
 						<img
 							src={image}
 							alt=""
 							className={clsx(
-								"mb-[8px] mt-[14px] max-h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9]",
+								"mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9]",
 								imgClass ? imgClass : "object-cover",
 							)}
 						/>
+					) : (
+						<div className="flex justify-center items-center text-2xl text-center mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9] bg-slate-300 text-white">
+							Comming
+							<br className="md:hidden" /> Soon
+						</div>
 					)}
 					<p className="mt-[14px] text-[13px] md:text-[18px] font-semibold whitespace-pre-line">
 						{menu}
