@@ -1,45 +1,102 @@
 export const artistData = [
 	{
 		id: "1",
-		name: "アーティスト名",
-		image: ["/assets/common/sample.png"],
-		description: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+		name: "Ka Lehua Studio ERIKA（カ レフア スタジオ エリカ）",
+		image: [
+			"/assets/artist/1/1.Ka Lehua Studio ERIKA_2.jpg",
+			"/assets/artist/1/1.Ka Lehua Studio ERIKA.jpg",
+		],
+		imgClass: "object-[0%_10%]",
+		description: `京王線沿線にある駅近のスタジオにて
+レッスンしています。
+生徒さんたちは皆さん仲間想いで優しく、
+レッスンでは常に笑顔が絶えません。
+そんな雰囲気の中でも、
+キレイな姿勢で歌の意味を理解しながら
+笑顔で踊ることを大切に頑張っております。
+随時、生徒さん募集中です💘
+くわしくはＨＰをご覧ください。
+`,
 		schedule: {
-			day: [],
-			time: [],
+			day: ["＜8月3日(土)＞"],
+			time: ["１８：００〜、１９：３０〜"],
 		},
-		sns: {},
+		sns: {
+			home: "https://www.kalehua.tokyo/",
+		},
 	},
 	{
 		id: "2",
-		name: "アーティスト名",
-		image: ["/assets/common/sample.png"],
-		description: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+		name: "ハーラウカピオオカプアレフア",
+		image: ["/assets/artist/2/1.jpg"],
+		imgClass: "object-[0%_30%]",
+		description:
+			"ハワイの文化を正しく学び継承していくことに力を注ぎ、ナチュラルかつ謙虚な気持ちで、幅広い年代の生徒が楽しみながら踊っています。また、地域のイベントや福祉活動をはじめ、多くのイベントに出演しています。",
 		schedule: {
-			day: [],
-			time: [],
+			day: ["＜8月4日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
 		},
 		sns: {},
 	},
 	{
 		id: "3",
-		name: "アーティスト名",
-		image: ["/assets/common/sample.png"],
-		description: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+		name: "Hālau Nālikookapalai(ハーラウ ナーリコオカパライ)",
+		image: ["/assets/artist/3/1.jpg"],
+		description: `湘南で活動するフラチームです。
+カラカウア王の宮廷フラダンサーを曽祖母に持つハワイアンの師匠の教えのもと、古典フラ、現代フラ、ハワイアンカルチャーを楽しく学んでいます。`,
 		schedule: {
-			day: [],
-			time: [],
+			day: ["＜8月11日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
 		},
 		sns: {},
 	},
 	{
 		id: "4",
-		name: "アーティスト名",
-		image: ["/assets/common/sample.png"],
-		description: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+		name: "Kealiʻiokalani 剛 Kalima",
+		image: [
+			"/assets/artist/4/4.Kealiʻiokalani 剛 Kalima(1).jpg",
+			"/assets/artist/4/4.Kealiʻiokalani 剛 Kalima(2).jpg",
+		],
+		imgClass: "object-[0%_5%]",
+		description: `東京都出身
+2016年 ハワイ カメハメハ ハイスクール コンサートグリークラブでケアウホウのザック ラム氏に指導を受ける
+2017年 同クラブ内でハワイアン グループ「オーラウニウ」を結成
+2018年 ミュージック テッククラスにて 作成したCDアルバム「Untold」がナホク ハノハノ ミュージック アワードにノミネートされる
+2022年 ハワイ大学(音楽専攻)を卒業
+現在 様々なイベント、コンサートに出演、ウクレレクラスを持ち指導、生徒の出演もサポートしている`,
 		schedule: {
-			day: [],
-			time: [],
+			day: ["＜7月20日(土)、7月21日(日)、7月27日(土)、7月28日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+		sns: {},
+	},
+	{
+		id: "5",
+		name: "Kekai Ah Puck",
+		image: ["/assets/artist/4/4.Kekai Ah Puck.jpg"],
+		description:
+			"1986年生まれ。学生時代には全ての学年でハワイアンクラスを受講。フラ・タヒチアンのダンサーであるとともに、タヒチアンドラム(トエレ)、ウクレレ、ノーズフルートなどの楽器も使いこなし、ミュージシャンとしても活躍。亡き祖母の後を継ぎ、Lauhala Weavingでブレスレットなどアクセサリーの製作を行なっている。マウイのルアウ・ショー「Old Lahaina Luau」に出演していたプロダンサーであり、プロミュージシャン。",
+		schedule: {
+			day: ["＜7月20日(土)、7月21日(日)、7月28日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+		sns: {},
+	},
+	{
+		id: "6",
+		name: "日下貴博 -Taka-",
+		image: ["/assets/artist/4/4.日下貴博 -Taka-.jpg"],
+		description: `1973年8月13日生まれ
+横浜出身
+2005年頃よりハワイの美しさと音楽の素晴らしさに触れウクレレを始める。
+ハワイの音楽の先生の下でウクレレと歌を学び2010年頃より本格的に演奏活動を始める。
+ハワイオアフ島でのライブを経験し現地のハワイミュージシャンとも多くの交流を持つ。
+現在は山形、仙台、宇都宮、群馬、東京、横浜、浜松、名古屋、沖縄にウクレレの教室を持ちその他の地域にはウクレレのワークショップ講師としてウクレレのハワイアンの演奏方法を伝えている。
+演奏活動としては、全国各地でのライブ、フラの教室の発表会、フラの大会の演奏、ホテルなどのハワイアンフェスティバルの演奏、各地のイベントでの演奏を行う。
+ハワイ現地のミュージシャンからのバックアップも行う`,
+		schedule: {
+			day: ["＜7月27日(土)＞"],
+			time: ["１８：００〜、１９：３０〜"],
 		},
 		sns: {},
 	},

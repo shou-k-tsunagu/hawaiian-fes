@@ -14,9 +14,12 @@ export interface Props {
 	shopNo?: string;
 	title: string;
 	subTitle?: string;
-	menu: string;
+	food: string;
+	drink: string;
 	description: string;
+	drinkDescription: string;
 	image: string;
+	drinkImage: string;
 	imgClass?: string;
 	shopImage?: string;
 	dialogInfo?: {
@@ -35,9 +38,12 @@ export const ShopCard = ({
 	shopNo,
 	title,
 	subTitle,
-	menu,
+	food,
+	drink,
 	description,
+	drinkDescription,
 	image,
+	drinkImage,
 	imgClass,
 	shopImage,
 	dialogInfo,
@@ -45,7 +51,7 @@ export const ShopCard = ({
 	return (
 		<Dialog>
 			<DialogTrigger asChild className="cursor-pointer">
-				<div className="flex flex-col drop-shadow-og w-[calc(50%-4px)] md:max-w-[305px] rounded-[18px] md:rounded-[30px] bg-white px-[15px] md:px-[23px] pb-[23px] pt-[15px] md:pt-[23px] text-black">
+				<div className="flex flex-col drop-shadow-og w-full md:max-w-[305px] rounded-[18px] md:rounded-[30px] bg-white px-[15px] md:px-[23px] pb-[23px] pt-[15px] md:pt-[23px] text-black">
 					{/* <p className="mt-[9px] text-[16px] md:text-[22px] font-semibold text-blue">
 						{`${shopNo ? shopNo : id}.${title}`}
 					</p>
@@ -53,27 +59,53 @@ export const ShopCard = ({
 						{subTitle || "　"}
 					</p> */}
 					<img src={shopImage} alt="" className="" />
-					{image ? (
-						<img
-							src={image}
-							alt=""
-							className={clsx(
-								"mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9]",
-								imgClass ? imgClass : "object-cover",
+					<div className="flex flex-row md:flex-col justify-between">
+						<div className="w-[calc(50%-4px)] md:w-full">
+							{image ? (
+								<img
+									src={image}
+									alt=""
+									className={clsx(
+										"mb-[8px] mt-[14px] w-full rounded-[16px] border border-[#D9D9D9]",
+										imgClass ? imgClass : "object-cover",
+									)}
+								/>
+							) : (
+								<div className="flex justify-center items-center text-2xl text-center mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9] bg-slate-300 text-white">
+									Comming
+									<br className="md:hidden" /> Soon
+								</div>
 							)}
-						/>
-					) : (
-						<div className="flex justify-center items-center text-2xl text-center mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9] bg-slate-300 text-white">
-							Comming
-							<br className="md:hidden" /> Soon
+							<p className="mt-[14px] text-[13px] md:text-[18px] font-semibold whitespace-pre-line">
+								{food}
+							</p>
+							<p className="text-[13px] md:text-[16px] font-medium mb-[30px] mt-[7px] md:mt-[9px]">
+								{description}
+							</p>
 						</div>
-					)}
-					<p className="mt-[14px] text-[13px] md:text-[18px] font-semibold whitespace-pre-line">
-						{menu}
-					</p>
-					<p className="text-[13px] md:text-[16px] font-medium mb-[30px] mt-[7px] md:mt-[9px]">
-						{description}
-					</p>
+						<div className="w-[calc(50%-4px)] md:w-full">
+							{drinkImage ? (
+								<img
+									src={drinkImage}
+									alt=""
+									className={clsx(
+										"mb-[8px] mt-[14px] w-full rounded-[16px] border border-[#D9D9D9] object-cover",
+									)}
+								/>
+							) : (
+								<div className="flex justify-center items-center text-2xl text-center mb-[8px] mt-[14px] h-[202px] md:w-[260px] rounded-[16px] border border-[#D9D9D9] bg-slate-300 text-white">
+									Comming
+									<br className="md:hidden" /> Soon
+								</div>
+							)}
+							<p className="mt-[14px] text-[13px] md:text-[18px] font-semibold whitespace-pre-line">
+								{drink}
+							</p>
+							<p className="text-[13px] md:text-[16px] font-medium mb-[30px] mt-[7px] md:mt-[9px]">
+								{drinkDescription}
+							</p>
+						</div>
+					</div>
 					<div className="text-center text-[13px] md:text-[14px] font-semibold text-blue mt-auto">
 						もっと詳しく
 					</div>
@@ -105,7 +137,7 @@ export const ShopCard = ({
 											src={info?.image}
 											alt=""
 											className={cn(
-												"order-0 mt-[10px] md:mt-0 md:order-1 max-h-[245px] w-full md:max-w-[244px] md:h-[190px] mx-auto md:mx-0 object-cover border border-[#CCCCCC] rounded-[15px]",
+												"order-0 mt-[10px] md:mt-0 md:order-1 w-full md:max-w-[250px] mx-auto md:mx-0 object-cover border border-[#CCCCCC] rounded-[15px]",
 												info?.imgClass,
 											)}
 										/>

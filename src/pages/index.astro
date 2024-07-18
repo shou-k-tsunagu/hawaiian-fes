@@ -5,7 +5,7 @@ import { ShopCard } from '@/components/Common/ShopCard'
 import MainVisual from '@/components/MainVisual/MainVisual.astro'
 import Layout from '@/layouts/Layout.astro'
 import { CollaboData, artistData } from '@/lib/artist-data'
-import { drinkData, foodData, shopInfo } from '@/lib/shop-data'
+import { foodData, shopInfo } from '@/lib/shop-data'
 
 import mainBgImage from '@/assets/common/main-bg.png'
 import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
@@ -65,7 +65,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
                   </div>
                 </td>
                 <td class="pb-[24px] pl-[19px] leading-[35px]">
-                  2024年7月19日（金）～8月18日(日)<br />
+                  2024年7月19日（金）～8月18日（日）<br />
                   <p class="text-[15px] font-medium leading-[22px]">
                     平日15:00～22:00 土日祝日11:00〜22:00 ※L.O.21:30<br />
                     ※雨天決行（荒天時は中止）
@@ -177,7 +177,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
           class="text-[26px] md:text-[40px] font-semibold text-black"
           id="food-menu"
         >
-          FOOD MENU
+          MENU
         </p>
         <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
       </div>
@@ -193,9 +193,12 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
                 id={shop.id}
                 title={shop.title}
                 subTitle={shop.subTitle}
-                menu={shop.menu}
+                food={shop.food}
+                drink={shop.drink}
                 description={shop.description}
+                drinkDescription={shop.drinkDescription}
                 image={shop.image}
+                drinkImage={shop.drinkImage}
                 imgClass={shop.imgClass}
                 shopImage={shop.shopImage}
                 dialogInfo={shopInfo.find((info) => info.id === shop.id)?.info}
@@ -205,7 +208,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
           })
         }
       </div>
-      <div
+      <!-- <div
         class="flex justify-center items-center mt-[47px] md:mt-[90px] gap-x-[7px] md:gap-x-[24px] mb-[25px] md:mb-[44px]"
       >
         <div class="h-[1px] w-[57px] md:w-[216px] bg-black"></div>
@@ -240,7 +243,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
             // }
           })
         }
-      </div>
+      </div> -->
     </div>
     <div class="absolute top-20 left-0 right-0">
       <Image src={mainBgImage} alt="" class="w-full" />
@@ -265,24 +268,25 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <div
         class="flex flex-wrap md:justify-center lg:justify-normal md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[24px]"
       >
-        <!-- {
+        {
           artistData.map((artist) => (
             <ArtistCard
               client:load
               id={artist.id}
               name={artist.name}
               image={artist.image}
+              imgClass={artist.imgClass}
               description={artist.description}
               sns={artist.sns}
               schedule={artist.schedule}
             />
           ))
-        } -->
-        <div
+        }
+        <!-- <div
           class="w-full bg-slate-300 text-white text-5xl h-72 flex justify-center items-center text-center"
         >
           Comming<br class="md:hidden" /> Soon
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

@@ -49,7 +49,10 @@ export const ArtistCard = ({
 					<img
 						src={image[0]}
 						alt=""
-						className="w-full h-[226px] md:h-[200px] object-cover md:object-cover"
+						className={cn(
+							"w-full h-[226px] md:h-[200px] object-cover",
+							imgClass,
+						)}
 					/>
 					<p className="text-[14px] md:text-[16px] font-semibold mt-[12px] md:mt-[17px]">
 						{name}
@@ -121,7 +124,7 @@ export const ArtistCard = ({
 										src={img}
 										alt=""
 										key={`${img.length}_img`}
-										className={cn("mb-[10px] w-full ml-auto", imgClass)}
+										className="mb-[10px] w-full ml-auto"
 									/>
 								))}
 							</div>
