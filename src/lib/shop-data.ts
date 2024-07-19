@@ -30,7 +30,7 @@ export const foodData = [
 		title: "ブルーム―ン",
 		subTitle: "",
 		food: "ハワイアンフライドポテト",
-		drink: "ブルーム―ンビール生",
+		drink: "ブルームーンビール生",
 		description: "",
 		drinkDescription: "",
 		image: "/assets/menu/3/3.jpg",
@@ -237,7 +237,7 @@ export const shopInfo = [
 				image: "/assets/menu/2/LINE_ALBUM_02_コロナ_ラニカイ_240718_4.jpg",
 			},
 			{
-				title: "サーモンポギ",
+				title: "サーモンポキ",
 				price: "1000",
 				catchcopy: "",
 				description: "",
@@ -270,7 +270,7 @@ export const shopInfo = [
 		id: "3",
 		info: [
 			{
-				title: "ブルーム―ンビール生",
+				title: "ブルームーンビール生",
 				price: "900",
 				catchcopy: "",
 				description: "",
@@ -305,7 +305,7 @@ export const shopInfo = [
 				image: "/assets/menu/3/5.jpg",
 			},
 			{
-				title: "ココナッツグリンカレー",
+				title: "ココナッツグリーンカレー",
 				price: "1200",
 				catchcopy: "",
 				description: "",

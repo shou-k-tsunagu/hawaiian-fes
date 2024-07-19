@@ -1,30 +1,30 @@
 export const artistData = [
-	{
-		id: "1",
-		name: "Ka Lehua Studio ERIKA（カ レフア スタジオ エリカ）",
-		image: [
-			"/assets/artist/1/1.Ka Lehua Studio ERIKA_2.jpg",
-			"/assets/artist/1/1.Ka Lehua Studio ERIKA.jpg",
-		],
-		imgClass: "object-[0%_10%]",
-		description: `京王線沿線にある駅近のスタジオにて
-レッスンしています。
-生徒さんたちは皆さん仲間想いで優しく、
-レッスンでは常に笑顔が絶えません。
-そんな雰囲気の中でも、
-キレイな姿勢で歌の意味を理解しながら
-笑顔で踊ることを大切に頑張っております。
-随時、生徒さん募集中です💘
-くわしくはＨＰをご覧ください。
-`,
-		schedule: {
-			day: ["＜8月3日(土)＞"],
-			time: ["１８：００〜、１９：３０〜"],
-		},
-		sns: {
-			home: "https://www.kalehua.tokyo/",
-		},
-	},
+	// 	{
+	// 		id: "1",
+	// 		name: "Ka Lehua Studio ERIKA（カ レフア スタジオ エリカ）",
+	// 		image: [
+	// 			"/assets/artist/1/1.Ka Lehua Studio ERIKA_2.jpg",
+	// 			"/assets/artist/1/1.Ka Lehua Studio ERIKA.jpg",
+	// 		],
+	// 		imgClass: "object-[0%_10%]",
+	// 		description: `京王線沿線にある駅近のスタジオにて
+	// レッスンしています。
+	// 生徒さんたちは皆さん仲間想いで優しく、
+	// レッスンでは常に笑顔が絶えません。
+	// そんな雰囲気の中でも、
+	// キレイな姿勢で歌の意味を理解しながら
+	// 笑顔で踊ることを大切に頑張っております。
+	// 随時、生徒さん募集中です💘
+	// くわしくはＨＰをご覧ください。
+	// `,
+	// 		schedule: {
+	// 			day: ["＜8月3日(土)＞"],
+	// 			time: ["１８：００〜、１９：３０〜"],
+	// 		},
+	// 		sns: {
+	// 			home: "https://www.kalehua.tokyo/",
+	// 		},
+	// 	},
 	{
 		id: "2",
 		name: "ハーラウカピオオカプアレフア",
@@ -38,18 +38,18 @@ export const artistData = [
 		},
 		sns: {},
 	},
-	{
-		id: "3",
-		name: "Hālau Nālikookapalai(ハーラウ ナーリコオカパライ)",
-		image: ["/assets/artist/3/1.jpg"],
-		description: `湘南で活動するフラチームです。
-カラカウア王の宮廷フラダンサーを曽祖母に持つハワイアンの師匠の教えのもと、古典フラ、現代フラ、ハワイアンカルチャーを楽しく学んでいます。`,
-		schedule: {
-			day: ["＜8月11日(日)＞"],
-			time: ["１８：００〜、１９：３０〜"],
-		},
-		sns: {},
-	},
+	// 	{
+	// 		id: "3",
+	// 		name: "Hālau Nālikookapalai(ハーラウ ナーリコオカパライ)",
+	// 		image: ["/assets/artist/3/1.jpg"],
+	// 		description: `湘南で活動するフラチームです。
+	// カラカウア王の宮廷フラダンサーを曽祖母に持つハワイアンの師匠の教えのもと、古典フラ、現代フラ、ハワイアンカルチャーを楽しく学んでいます。`,
+	// 		schedule: {
+	// 			day: ["＜8月11日(日)＞"],
+	// 			time: ["１８：００〜、１９：３０〜"],
+	// 		},
+	// 		sns: {},
+	// 	},
 	{
 		id: "4",
 		name: "Kealiʻiokalani 剛 Kalima",
