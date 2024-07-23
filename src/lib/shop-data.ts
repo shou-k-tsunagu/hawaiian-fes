@@ -42,7 +42,7 @@ export const foodData = [
 		title: "コナビール",
 		subTitle: "",
 		food: "ガーリックシュリンプ（ソフトシェルシュリンプ）",
-		drink: "ビックウエーブゴールデンエール 樽",
+		drink: "ビックウエーブ ゴールデンエール 樽生",
 		description: "",
 		drinkDescription: "",
 		image: "/assets/menu/4/5.jpg",
@@ -155,7 +155,7 @@ export const shopInfo = [
 				image: "/assets/menu/1/8.jpg",
 			},
 			{
-				title: "ポップレイIPA",
+				title: "ポップレイ IPA",
 				price: "800",
 				catchcopy: "",
 				description: "",
@@ -305,7 +305,7 @@ export const shopInfo = [
 				image: "/assets/menu/3/5.jpg",
 			},
 			{
-				title: "ココナッツグリーンカレー",
+				title: "ココナッツ グリーンカレー",
 				price: "1200",
 				catchcopy: "",
 				description: "",
@@ -338,14 +338,14 @@ export const shopInfo = [
 		id: "4",
 		info: [
 			{
-				title: "ビックウエーブゴールデンエール 樽",
+				title: "ビックウエーブ ゴールデンエール 樽生",
 				price: "1100",
 				catchcopy: "",
 				description: "",
 				image: "/assets/menu/4/10.jpg",
 			},
 			{
-				title: "ビックウエーブゴールデンエール",
+				title: "ビックウエーブ ゴールデンエール",
 				price: "1000",
 				catchcopy: "",
 				description: "",
@@ -359,14 +359,14 @@ export const shopInfo = [
 				image: "/assets/menu/4/8.jpg",
 			},
 			{
-				title: "ハナレイアイランド",
+				title: "ハナレイ アイランド",
 				price: "900",
 				catchcopy: "",
 				description: "",
 				image: "/assets/menu/4/7.jpg",
 			},
 			{
-				title: "コナライトブロンドエール",
+				title: "コナライト ブロンドエール",
 				price: "900",
 				catchcopy: "",
 				description: "",

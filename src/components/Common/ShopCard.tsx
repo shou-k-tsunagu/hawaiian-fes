@@ -137,27 +137,27 @@ export const ShopCard = ({
 											src={info?.image}
 											alt=""
 											className={cn(
-												"order-0 mt-[10px] md:mt-0 md:order-1 w-full md:max-w-[250px] mx-auto md:mx-0 object-cover border border-[#CCCCCC] rounded-[15px]",
+												"order-0 mt-[10px] md:mt-0 md:order-1 w-full md:w-[244px] h-[245px] md:h-[190px] object-contain mx-auto md:mx-0 border border-[#CCCCCC] rounded-[15px]",
 												info?.imgClass,
 											)}
 										/>
 									)
 								) : (
-									<div className="order-0 md:order-1 w-full md:max-w-[244px] mx-auto md:mx-0">
+									<div className="order-0 md:order-1 w-full md:w-[244px] mx-auto md:mx-0">
 										{info.image.map((img) => (
 											<img
 												src={img}
 												alt=""
 												key={`${img.length}_img`}
 												className={cn(
-													"mt-[10px] w-full max-h-[245px] md:h-[190px] border border-[#CCCCCC] rounded-[15px]",
+													"mt-[10px] w-full max-h-[245px] h-[245px] md:h-[190px] object-contain border border-[#CCCCCC] rounded-[15px]",
 													info?.imgClass,
 												)}
 											/>
 										))}
 									</div>
 								)}
-								<div className="mt-[16px]">
+								<div className="mt-[16px] md:w-[360px]">
 									<p className="text-[16px] md:text-[22px] font-semibold leading-[30px]">
 										{info?.title}　{info?.price ? `${info.price}円` : ""}
 									</p>
