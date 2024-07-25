@@ -4,7 +4,7 @@ import { ArtistCard } from '@/components/Common/ArtistCard'
 import { ShopCard } from '@/components/Common/ShopCard'
 import MainVisual from '@/components/MainVisual/MainVisual.astro'
 import Layout from '@/layouts/Layout.astro'
-import { CollaboData, artistData } from '@/lib/artist-data'
+import { CollaboData, artistData, artistData2 } from '@/lib/artist-data'
 import { foodData, shopInfo } from '@/lib/shop-data'
 
 import mainBgImage from '@/assets/common/main-bg.png'
@@ -266,7 +266,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
         class="mx-auto mb-[26px] md:mb-[102px] mt-[21px]"
       />
       <div
-        class="flex flex-wrap md:justify-center lg:justify-normal md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[24px]"
+        class="flex flex-wrap md:justify-center lg:justify-normal md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[20px]"
       >
         {
           artistData.map((artist) => (
@@ -287,6 +287,29 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
         >
           Comming<br class="md:hidden" /> Soon
         </div> -->
+        <img src="/assets/artist/5/1.png" alt="" class="w-full" />
+        {
+          artistData2.map((artist) => (
+            <div class="w-full md:w-[305px]">
+              <p class="text-[14px] md:text-[16px] font-semibold mt-[12px] md:mt-[17px]">
+                {artist.name}
+              </p>
+              <div class="bg-[#E0EFF3] p-[16px] my-[10px]">
+                <p class="text-[15px] md:text-[16px] font-medium mb-[10px]">
+                  ■演奏スケジュール（予定）
+                </p>
+                {artist.schedule?.day.map((d, i) => {
+                  return (
+                    <div class="text-[13px] md:text-[14px] leading-[26px]">
+                      <p class="font-semibold">{d}</p>
+                      <p class="font-medium">{artist.schedule?.time[i]}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

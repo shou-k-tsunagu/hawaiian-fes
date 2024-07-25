@@ -1,30 +1,19 @@
 export const artistData = [
-	// 	{
-	// 		id: "1",
-	// 		name: "Ka Lehua Studio ERIKA（カ レフア スタジオ エリカ）",
-	// 		image: [
-	// 			"/assets/artist/1/1.Ka Lehua Studio ERIKA_2.jpg",
-	// 			"/assets/artist/1/1.Ka Lehua Studio ERIKA.jpg",
-	// 		],
-	// 		imgClass: "object-[0%_10%]",
-	// 		description: `京王線沿線にある駅近のスタジオにて
-	// レッスンしています。
-	// 生徒さんたちは皆さん仲間想いで優しく、
-	// レッスンでは常に笑顔が絶えません。
-	// そんな雰囲気の中でも、
-	// キレイな姿勢で歌の意味を理解しながら
-	// 笑顔で踊ることを大切に頑張っております。
-	// 随時、生徒さん募集中です💘
-	// くわしくはＨＰをご覧ください。
-	// `,
-	// 		schedule: {
-	// 			day: ["＜8月3日(土)＞"],
-	// 			time: ["１８：００〜、１９：３０〜"],
-	// 		},
-	// 		sns: {
-	// 			home: "https://www.kalehua.tokyo/",
-	// 		},
-	// 	},
+	{
+		id: "1",
+		name: "NANIPILINA Hulastudio/Mino'aka Hula studio",
+		image: ["/assets/artist/1/1.jpg"],
+		imgClass: "object-[0%_10%]",
+		description: `みなさんAloha!!
+ハワイ語でNANIは美しい、PILINAは絆という意味があります!!美しい絆を持ったお仲間と沢山の人を笑顔にhappyに出来たらと思っています！
+そして今回はMino'aka Hula studioさんとコラボレーションさせて頂きます!!素敵なお時間に出来るよう頑張ります!!
+	`,
+		schedule: {
+			day: ["＜8月11日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+		sns: {},
+	},
 	{
 		id: "2",
 		name: "ハーラウカピオオカプアレフア",
@@ -34,7 +23,7 @@ export const artistData = [
 			"ハワイの文化を正しく学び継承していくことに力を注ぎ、ナチュラルかつ謙虚な気持ちで、幅広い年代の生徒が楽しみながら踊っています。また、地域のイベントや福祉活動をはじめ、多くのイベントに出演しています。",
 		schedule: {
 			day: ["＜8月4日(日)＞"],
-			time: ["１８：００〜、１９：３０〜"],
+			time: ["１８：3０〜"],
 		},
 		sns: {},
 	},
@@ -99,6 +88,65 @@ export const artistData = [
 			time: ["１８：００〜、１９：３０〜"],
 		},
 		sns: {},
+	},
+];
+
+export const artistData2 = [
+	{
+		id: "1",
+		name: "Tento",
+		description: "",
+		schedule: {
+			day: [
+				"＜7月22日(月)、7月24日(水)、8月1日(木)、8月5日(月)、8月7日(水)、8月14日(水)、8月16日(金)＞",
+			],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
+		id: "2",
+		name: " KAZU",
+		description: "",
+		schedule: {
+			day: ["＜7月25日(木)、7月29日(月)、8月15日(木)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
+		id: "3",
+		name: "あお",
+		description: "",
+		schedule: {
+			day: ["＜7月26日(金)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
+		id: "4",
+		name: "FALCON",
+		description: "",
+		schedule: {
+			day: ["＜7月29日(月)、7月31日(水)、8月13日(火)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
+		id: "5",
+		name: "ドラマチックガマン",
+		description: "",
+		schedule: {
+			day: ["＜8月2日(金)、8月8日(木)、8月9日(金)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
+		id: "6",
+		name: "ワンダフルワンダー",
+		description: "",
+		schedule: {
+			day: ["＜8月6日(火)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
 	},
 ];
 
