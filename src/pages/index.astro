@@ -7,8 +7,9 @@ import Layout from '@/layouts/Layout.astro'
 import { CollaboData, artistData, artistData2 } from '@/lib/artist-data'
 import { foodData, shopInfo } from '@/lib/shop-data'
 
+import eventImage from '@/assets/common/event-img.svg'
 import mainBgImage from '@/assets/common/main-bg.png'
-import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
+import mvBgImage3 from '@/assets/common/mv-bg-3-img.png'
 ---
 
 <Layout
@@ -33,7 +34,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <img
         src="/assets/common/flower-logo.svg"
         alt=""
-        class="mx-auto mb-[30px] md:mb-[37px] mt-[12px]"
+        class="mx-auto mb-[30px] md:mb-[37px] mt-[7px] md:mt-[12px] w-[37px] md:w-auto"
       />
       <div
         class="mb-[84px] drop-shadow-og md:min-h-[447px] rounded-[30px] bg-white pt-[22px] md:pt-[52px] pb-[32px] md:pb-[50px] px-[20px] lg:pl-[123px] relative"
@@ -167,7 +168,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <img
         src="/assets/common/flower-logo.svg"
         alt=""
-        class="mx-auto mb-[57px] mt-[21px]"
+        class="mx-auto mb-[46px] md:mb-[57px] mt-[7px] md:mt-[21px] w-[37px] md:w-auto"
       />
       <div
         class="flex justify-center items-center gap-x-[7px] md:gap-x-[24px] mb-[25px] md:mb-[44px]"
@@ -263,7 +264,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <img
         src="/assets/common/flower-logo.svg"
         alt=""
-        class="mx-auto mb-[26px] md:mb-[102px] mt-[21px]"
+        class="mx-auto mb-[52px] md:mb-[102px] mt-[7px] md:mt-[21px] w-[37px] md:w-auto"
       />
       <div
         class="flex flex-wrap md:justify-center lg:justify-normal md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[20px]"
@@ -288,6 +289,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
           Comming<br class="md:hidden" /> Soon
         </div> -->
         <img src="/assets/artist/5/1.png" alt="" class="w-full" />
+        <!-- <img src="/assets/artist/5/2.png" alt="" class="w-full" /> -->
         {
           artistData2.map((artist) => (
             <div class="w-full md:w-[305px]">
@@ -296,7 +298,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
               </p>
               <div class="bg-[#E0EFF3] p-[16px] my-[10px]">
                 <p class="text-[15px] md:text-[16px] font-medium mb-[10px]">
-                  ■演奏スケジュール（予定）
+                  ■パフォーマンススケジュール（予定）
                 </p>
                 {artist.schedule?.day.map((d, i) => {
                   return (
@@ -326,11 +328,9 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <img
         src="/assets/common/flower-logo.svg"
         alt=""
-        class="mx-auto mb-[21px] md:mb-[93px] mt-[21px]"
+        class="mx-auto mb-[35px] md:mb-[64px] mt-[7px] md:mt-[21px] w-[37px] md:w-auto"
       />
-      <div
-        class="flex flex-wrap flex-col justify-between md:flex-row md:gap-x-[20px] md:gap-y-[43px] gap-y-[40px]"
-      >
+      <div class="relative">
         <!-- {
           CollaboData.map((data) => (
             <div class="w-full md:w-[calc(50%-10px)] md:max-w-[462px]">
@@ -339,11 +339,50 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
             </div>
           ))
         } -->
-        <div
+
+        <div class="max-w-[586px] ml-auto">
+          <p class="text-[18px] md:text-[24px] font-semibold mb-[16px]">
+            ウクレレ体験会を開催
+          </p>
+          <p
+            class="text-[14px] md:text-[16px] leading-[30px] md:leading-[36px] mb-[23px]"
+          >
+            初心者～経験者まで誰でもOK！<br />
+            アーバンドック ららぽーと豊洲 1の3階にある島村楽器とのコラボウクレレ体験会を開催します！<br
+            />
+            ハワイ生まれの伝統的弦楽器「ウクレレ」を弾いてハワイに行った雰囲気を味わいましょう♪
+          </p>
+          <Image
+            src={eventImage}
+            alt="event_img"
+            class="md:absolute md:top-0 md:left-[90px] w-[171px] md:w-auto mx-auto mb-[20px]"
+          />
+          <a
+            href="https://form.run/@info-XkEnAq29Q7gZY6upA4FD"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white text-center text-[15px] md:text-[20px] leading-[32px] font-semibold"
+          >
+            <div
+              class="bg-blue w-[334px] h-[70px] rounded-[10px] flex justify-center items-center"
+            >
+              参加申し込みはこちら
+              <img
+                src="/assets/common/right-arrow-logo.svg"
+                alt=""
+                class="ml-[32px]"
+              />
+            </div>
+          </a>
+          <p class="text-[14px] md:text-[15px] leading-[36px]">
+            定員各日程：5名
+          </p>
+        </div>
+        <!-- <div
           class="w-full bg-slate-300 text-white text-5xl h-72 flex justify-center items-center text-center"
         >
           Comming<br class="md:hidden" /> Soon
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -358,7 +397,7 @@ import mvBgImage3 from '../assets/common/mv-bg-3-img.png'
       <img
         src="/assets/common/flower-logo.svg"
         alt=""
-        class="mx-auto mb-[21px] md:mb-[64px] mt-[21px]"
+        class="mx-auto mb-[21px] md:mb-[64px] mt-[7px] md:mt-[21px] w-[37px] md:w-auto"
       />
       <p class="text-[18px] font-semibold leading-[32px] text-center">
         アーバンドック ららぽーと豊洲中庭<br

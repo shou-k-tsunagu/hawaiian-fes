@@ -131,6 +131,15 @@ export const artistData2 = [
 		},
 	},
 	{
+		id: "7",
+		name: "えはら",
+		description: "",
+		schedule: {
+			day: ["＜7月30日(火)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+	},
+	{
 		id: "5",
 		name: "ドラマチックガマン",
 		description: "",
