@@ -89,6 +89,40 @@ export const artistData = [
 		},
 		sns: {},
 	},
+	{
+		id: "7",
+		name: `Hula Studio Manuwai ‘Olu
+    フラスタジオマヌワイオル`,
+		image: ["/assets/artist/6/1.jpg", "/assets/artist/6/2.jpg"],
+		description: `私達のスタジオは江東区猿江恩賜公園の横にあり、3歳から90代までフラを楽しく学んでいます。ウクレレを弾き歌うハリーズオハナバンドはダンサーや子供たちのパパやママがメンバーです。
+飾らないハワイアンスタイル、しあわせなフラが私たちの十八番。
+楽しいステージをお届けします。`,
+		schedule: {
+			day: ["＜8月18日(日)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+		sns: {},
+	},
+	{
+		id: "8",
+		name: `かな3℃(かなサンドシー)
+Kouji Hirai.
+Kaoli.
+Duu`,
+		image: ["/assets/artist/7/1.jpg"],
+		description: `沖縄の方言で「かなさ」とは愛おしい、好き、
+愛してる
+などの意味をもちます。
+Kaoli と沖縄出身のDuuのユニット名「かなさ」にフラレア編集長
+平井幸二氏が加わり
+かな3℃に。
+沖縄、ハワイ、フラを融合した音楽を目指します`,
+		schedule: {
+			day: ["＜8月10日(土)＞"],
+			time: ["１８：００〜、１９：３０〜"],
+		},
+		sns: {},
+	},
 ];
 
 export const artistData2 = [

@@ -54,7 +54,7 @@ export const ArtistCard = ({
 							imgClass,
 						)}
 					/>
-					<p className="text-[14px] md:text-[16px] font-semibold mt-[12px] md:mt-[17px]">
+					<p className="text-[14px] md:text-[16px] font-semibold mt-[12px] md:mt-[17px] whitespace-pre-line">
 						{name}
 					</p>
 					{schedule && (
