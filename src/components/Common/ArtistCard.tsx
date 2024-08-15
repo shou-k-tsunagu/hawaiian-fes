@@ -171,6 +171,16 @@ export const ArtistCard = ({
 								)}
 								<p className="text-[14px] md:text-[16px] leading-[28px] md:mt-[10px] md:leading-[20px] md:mb-[20px] whitespace-pre-line">
 									{description}
+									{id === "9" && (
+										<a
+											href="https://www.shimamura.co.jp/shop/toyosu/"
+											className="text-blue"
+											target="_blank"
+											rel="noreferrer"
+										>
+											https://www.shimamura.co.jp/shop/toyosu/
+										</a>
+									)}
 								</p>
 							</div>
 						</div>
